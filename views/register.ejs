@@ -26,8 +26,16 @@
 
                     <hr>
                     <!-- Makes POST request to /register route -->
-                    <div class="card">
-                        <h5 class="sub-title">Sign Up With Email</h5>
+                    <div class="container container-center">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id='emailRegister' onClick="DisplaySignup()">
+                            <label class="custom-control-label" for="emailRegister">I Want To Sign Up With My Email</label>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="card" style="display:none" id="emailRegCard">
                         <div class="card-body">
                               <form action="/register" method="POST">
                                 <div class="form-group">
@@ -68,4 +76,5 @@
     </div>
 </div>
 
-<%- include('partials/header') %>
+<script type="text/javascript" src="js/home.js"></script>
+<%- include('partials/footer') %>
