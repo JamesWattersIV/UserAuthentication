@@ -1,0 +1,44 @@
+body {
+    background-color: #E8ECEF;
+    --main-blue-colour:#0c2543;
+    /*Set font for page*/
+    font-family: "Heebo",sans-serif;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.row-layout{
+    padding: 50px 0 0 0;
+}
+
+.card-title{
+    padding-top:20px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-blue-colour);
+}
+
+.fa-color{
+    color: var(--main-blue-colour)
+}
+
+.btn-dark{
+    background-color: var(--main-blue-colour)
+}
+
+.btn-social{
+    text-align: center;
+}
+
+hr{
+    margin: 30px 0 30px 0;
+}
+
+.sub-title{
+    margin: 20px 0 0px 0;
+    align-self: center;
+
+}
