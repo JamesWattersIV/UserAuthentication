@@ -45,4 +45,69 @@ hr{
 
 .container-center{
     text-align: center;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.container-inputs{
+    margin-top: 70px;
+    text-align: left;
+}
+
+.input-container{
+    padding: 0px 10px 30px 10px;
+}
+
+.input-heading{
+    color: var(--main-blue-colour);
+    padding: 5px 0 0 0;
+}
+
+.form-control{
+    margin: -5px 0 20px 0;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    padding-bottom: 20px;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 7px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    border-radius: 10px;
+    background: var(--main-blue-colour); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: var(--main-blue-colour); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+#AgeInput{
+    margin: -10px 0 0 -10px;
 }

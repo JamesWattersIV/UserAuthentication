@@ -39,7 +39,12 @@ const userSchema = new mongoose.Schema({
     email:String,
     password:String,
     googleId: String,
-    facebookId: String
+    facebookId: String,
+    fName:String,
+    lName:String,
+    Age:Number,
+    degree:String,
+    favCourse:String
 });
 
 //Add Schema Plugins
@@ -170,11 +175,15 @@ app.post('/login',function(req,res){
         if(err){
             console.log(err);
         } else {
-            passport.authenticate('local')(req,res,function(){
+            passport.authenticate('local',{ failureRedirect:'/login/failed' })(req,res,function(){
                 res.redirect('/profile');
             });
         }
     })
+});
+
+app.get('/login/failed',function (req,res) {
+    res.redirect('/login');
 });
 
 //Start Server on port 3
