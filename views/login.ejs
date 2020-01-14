@@ -4,7 +4,7 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-5">
             <div class="card">
-                <h1 class="card-title"><i class="fas fa-user-plus fa-color"></i>  Sign Up</h1>
+                <h1 class="card-title"><i class="fas fa-sign-in-alt fa-color"></i>  Sign In</h1>
                 <div class="card-body">
 
                     <!-- Google and Facebook Register -->
@@ -12,32 +12,25 @@
                         <div class="card-body">
                             <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
                                 <i class="fab fa-google"></i>
-                                Sign Up with Google
+                                Sign In with Google
                             </a>
                         </div>
 
                         <div class="card-body">
                             <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook" role="button">
                                 <i class="fab fa-facebook"></i>
-                                Sign Up with Facebook
+                                Sign In with Facebook
                             </a>
                         </div>
                     </div>
 
                     <hr>
-                    <!-- Makes POST request to /register route -->
-                    <div class="container container-center">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id='emailRegister' onClick="DisplaySignup()">
-                            <label class="custom-control-label" for="emailRegister">I Want To Sign Up With My Email</label>
-                        </div>
-                    </div>
 
-                    <hr>
-
-                    <div class="card" style="display:none" id="emailRegCard">
+                    <!-- Makes POST request to /login route -->
+                    <div class="card" id="emailRegCard">
+                        <h1 class="sub-title">Sign In With Email</h1>
                         <div class="card-body">
-                              <form action="/register" method="POST">
+                            <form action="/login" method="POST">
                                 <div class="form-group">
 
                                     <label for="email">Email</label>
@@ -47,7 +40,7 @@
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" name="password">
                                 </div>
-                                <button type="submit" class="btn btn-dark">Register</button>
+                                <button type="submit" class="btn btn-dark">Login</button>
                             </form>
                         </div>
                     </div>
@@ -56,6 +49,4 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="js/home.js"></script>
 <%- include('partials/footer') %>

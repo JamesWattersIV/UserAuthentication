@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d14f6e-0667-447e-b875-ea8f9ed0e993" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/routes/user/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth/authRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/user/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="B:\GitHub\UserAuthentication\routes\auth" />
       <recent name="B:\GitHub\UserAuthentication\public" />
       <recent name="B:\GitHub\UserAuthentication\routes\main\posts" />
     </key>
@@ -74,11 +83,22 @@
       <option name="presentableId" value="Default" />
       <updated>1578979508730</updated>
       <workItem from="1578979510029" duration="9462000" />
-      <workItem from="1578998701220" duration="3434000" />
+      <workItem from="1578998701220" duration="3497000" />
+      <workItem from="1579004208206" duration="7595000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1195" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579009326234">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1195" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579009326234" />
+    <state x="-1230" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579006086344">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1230" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579006086344" />
   </component>
 </project>
