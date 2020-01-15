@@ -137,7 +137,7 @@ const check = require('./routes/user/checkUser');
 
 app.get('/profile', function(req,res){
     if(req.isAuthenticated()){
-        check.isFirstLogin(User,req.user._id);
+        //check.isFirstLogin(User,req.user._id);
         User.findOne({_id:req.user._id}, function(err,foundUser) {
             if (err) {
                 console.log(err, "No User Found");
