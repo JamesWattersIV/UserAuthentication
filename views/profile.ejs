@@ -17,24 +17,24 @@
             <form action="/edit" method="POST">
                <div class="container-inputs">
                   <label for="first-name"><h4 class="input-heading">First name</h4></label>
-                  <input type="text" class="form-control" name="first_name" id="first-name"  value='<%=fName%>' placeholder="<%=fName%>" disabled>
+                  <input type="text" class="form-control" name="first_name" id="first-name"  value='<%=fName%>' disabled>
 
                   <label for="last-name"><h4 class="input-heading">Last name</h4></label>
-                  <input type="text" class="form-control" name="last_name" id="last-name"  value='<%=lName%>' placeholder="<%=lName%>" disabled>
+                  <input type="text" class="form-control" name="last_name" id="last-name"  value='<%=lName%>' disabled>
 
                   <label for="rangeAge"><h4 class="input-heading">Age</h4></label>
                   <div class="slidecontainer">
                      <div class="row">
-                        <div class="col-10 col-sm-10"><input type="range" class="slider" min="16" max="100" step="1" id="rangeAge" value="0" oninput="ageChanged(this.value)" disabled></div>
+                        <div class="col-10 col-sm-10"><input name="Age" type="range" class="slider" min="16" max="100" step="1" id="rangeAge" value="<%=Age%>" oninput="ageChanged(this.value)" disabled></div>
                         <div class="col-1 col-sm-1"><h3 id="AgeInput"><%=Age%></h3></div>
                      </div>
                   </div>
 
                   <label for="degree"><h4 class="input-heading">Degree</h4></label>
-                  <input type="text" class="form-control" name="degree" id="degree" value="<%=Degree%>" placeholder="<%=Degree%>" disabled>
+                  <input type="text" class="form-control" name="degree" id="degree" value="<%=Degree%>"  disabled>
 
                   <label for="faveCourse"><h4 class="input-heading">Favourite Course</h4></label>
-                  <input type="text" class="form-control" name="faveCourse" id="faveCourse" value="<%=favCourse%>" placeholder="<%=favCourse%>" disabled>
+                  <input type="text" class="form-control" name="faveCourse" id="faveCourse" value="<%=favCourse%>" disabled>
 
                   <hr>
 

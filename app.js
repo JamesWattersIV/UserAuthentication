@@ -133,11 +133,8 @@ app.get('/auth/facebook/profile',
     });
 
 //Check to see if User is Authenticated
-const check = require('./routes/user/checkUser');
-
 app.get('/profile', function(req,res){
     if(req.isAuthenticated()){
-        //check.isFirstLogin(User,req.user._id);
         User.findOne({_id:req.user._id}, function(err,foundUser) {
             if (err) {
                 console.log(err, "No User Found");
@@ -194,6 +191,31 @@ app.post('/login',function(req,res){
 
 app.get('/login/failed',function (req,res) {
     res.redirect('/login');
+});
+
+//Update Users Information
+app.post('/edit',function(req,res) {
+    const userID = req.user.id;
+    const fName = req.body.first_name;
+    const lName = req.body.last_name;
+    const Age = parseInt(req.body.Age, 10);
+    const degree = req.body.degree;
+    const favCourse = req.body.faveCourse;
+
+    User.updateOne(
+        {_id:userID}, //The record we are looking for
+        {fName:fName,lName:lName,Age:Age,degree:degree,favCourse:favCourse}, //Fields to update
+        function(err){
+            if(err){
+                console.log(err,"could not update");
+            } else {
+                console.log("Successful Update");
+            }
+        }
+    );
+
+    res.redirect('/profile');
+
 });
 
 //Start Server on port 3

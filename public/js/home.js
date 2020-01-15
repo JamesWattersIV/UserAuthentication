@@ -55,6 +55,7 @@ function validateEdit(){
         console.log("Need Info");
         needUserInfo();
         showModal();
+        validateAll();
     } else {
         console.log("Have Info");
     }
@@ -64,33 +65,76 @@ function showModal(){
     $('#infoModal').modal('show')
 }
 
+function validateString(value){
+//Check to see if String is only white Spaces
+    if(!value.replace(/\s/g, '').length){
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function validateAll(){
     let fName = document.getElementById('first-name').value;
     let lName = document.getElementById('last-name').value;
     let Age = document.getElementById('rangeAge').value;
     let Degree = document.getElementById('degree').value;
     let favCourse = document.getElementById('faveCourse').value;
+
+    if ((!validateString(fName)) || (!validateString(lName)) || (!validateString(Age)) || (!validateString(Degree)) || (!validateString(favCourse))){
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function allInfoChecked(){
+    document.getElementById('saveButton').disabled =false;
+}
+
+function missingInfo(){
+    document.getElementById('saveButton').disabled =true;
 }
 
 //Event Listeners For Elements
 document.getElementById('first-name').addEventListener('change', function () {
-    alert("changed");
+    if (validateAll()){
+        allInfoChecked();
+    } else {
+        missingInfo();
+    }
 });
 
 document.getElementById('last-name').addEventListener('change', function () {
-    alert("changed");
+    if (validateAll()){
+        allInfoChecked();
+    } else {
+        missingInfo();
+    }
 });
 
 document.getElementById('rangeAge').addEventListener('change', function () {
-    alert("changed");
+    if (validateAll()){
+        allInfoChecked();
+    } else {
+        missingInfo();
+    }
 });
 
 document.getElementById('degree').addEventListener('change', function () {
-    alert("changed");
+    if (validateAll()){
+        allInfoChecked();
+    } else {
+        missingInfo();
+    }
 });
 
 document.getElementById('faveCourse').addEventListener('change', function () {
-    alert("changed");
+    if (validateAll()){
+        allInfoChecked();
+    } else {
+        missingInfo();
+    }
 });
 
 
