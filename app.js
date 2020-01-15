@@ -133,11 +133,22 @@ app.get('/auth/facebook/profile',
     });
 
 //Check to see if User is Authenticated
+const check = require('./routes/user/checkUser');
+
 app.get('/profile', function(req,res){
     if(req.isAuthenticated()){
-        res.render('profile');
+        check.isFirstLogin(User,req.user._id);
+        User.findOne({_id:req.user._id}, function(err,foundUser) {
+            if (err) {
+                console.log(err, "No User Found");
+                res.redirect('/login');
+            } else {
+                res.render('profile',{fName:foundUser.fName,lName:foundUser.lName,Age:foundUser.Age,Degree:foundUser.degree,favCourse:foundUser.favCourse});
+            }
+        });
+
     } else {
-        res.redirect('login');
+        res.redirect('/login');
     }
 });
 
@@ -148,7 +159,6 @@ app.get('/logout',function(req,res){
 });
 
 /*--------------------------------------Authentication Using Passport and Hashing -------------------------*/
-
 //Authentication for Email Registration
 app.post('/register',function(req,res){
     User.register({username:req.body.username},req.body.password, function(err,user){

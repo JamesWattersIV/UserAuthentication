@@ -15,11 +15,12 @@ function ageChanged(val){
     output.innerHTML = val; // Display the default slider value
 }
 
-/*let slider = document.getElementById("rangeAge");
-let output = document.getElementById("AgeInput");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-    output.innerHTML = this.value;
-}*/
+//Enable inputs when edit button is clicked
+function editInformation(){
+    document.getElementById('first-name').disabled = false;
+    document.getElementById('last-name').disabled = false;
+    document.getElementById('rangeAge').disabled = false;
+    document.getElementById('degree').disabled = false;
+    document.getElementById('faveCourse').disabled = false;
+    document.getElementById('saveButton').disabled =false;
+}

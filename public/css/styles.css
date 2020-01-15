@@ -26,7 +26,11 @@ body {
 }
 
 .btn-dark{
-    background-color: var(--main-blue-colour)
+    background-color: var(--main-blue-colour);
+}
+
+.btn-light{
+    background-color: #d3d3d3;
 }
 
 .btn-social{
