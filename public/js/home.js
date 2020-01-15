@@ -51,16 +51,49 @@ function validateEdit(){
     let Age = document.getElementById('rangeAge').value;
     let Degree = document.getElementById('degree').value;
     let favCourse = document.getElementById('faveCourse').value;
-    console.log("Validating Information");
-    if (isEmpty(fName) || isEmpty(lName) || isEmpty(Degree) || isEmpty(favCourse)){
+    if (isEmpty(fName) || isEmpty(lName) || isEmpty(Degree) || isEmpty(favCourse) || (Age==0)){
         console.log("Need Info");
         needUserInfo();
+        showModal();
     } else {
         console.log("Have Info");
     }
-
-    //Use This to validate Edit
-    /*fName.addEventListener('change', function () {
-        alert("changed");
-    });*/
 }
+
+function showModal(){
+    $('#infoModal').modal('show')
+}
+
+function validateAll(){
+    let fName = document.getElementById('first-name').value;
+    let lName = document.getElementById('last-name').value;
+    let Age = document.getElementById('rangeAge').value;
+    let Degree = document.getElementById('degree').value;
+    let favCourse = document.getElementById('faveCourse').value;
+}
+
+//Event Listeners For Elements
+document.getElementById('first-name').addEventListener('change', function () {
+    alert("changed");
+});
+
+document.getElementById('last-name').addEventListener('change', function () {
+    alert("changed");
+});
+
+document.getElementById('rangeAge').addEventListener('change', function () {
+    alert("changed");
+});
+
+document.getElementById('degree').addEventListener('change', function () {
+    alert("changed");
+});
+
+document.getElementById('faveCourse').addEventListener('change', function () {
+    alert("changed");
+});
+
+
+
+
+
