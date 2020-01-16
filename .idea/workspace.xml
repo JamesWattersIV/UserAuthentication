@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user/checkUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +81,9 @@
       <workItem from="1579015491179" duration="7824000" />
       <workItem from="1579025701578" duration="302000" />
       <workItem from="1579068366246" duration="11083000" />
-      <workItem from="1579082506244" duration="17309000" />
+      <workItem from="1579082506244" duration="17388000" />
+      <workItem from="1579177900101" duration="14000" />
+      <workItem from="1579180657006" duration="4668000" />
     </task>
     <servers />
   </component>
@@ -97,5 +99,9 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579113480689" />
+    <state x="-700" y="276" key="FileChooserDialogImpl" timestamp="1579177912396">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-700" y="276" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579177912396" />
   </component>
 </project>

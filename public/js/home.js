@@ -19,7 +19,6 @@ function ageChanged(val){
 function editInformation(){
     needUserInfo();
     document.getElementById('cancel').hidden =false;
-    //document.getElementById('saveButton').disabled =false;
 }
 
 function refreshPage(){
@@ -54,10 +53,10 @@ function validateEdit(){
     if (isEmpty(fName) || isEmpty(lName) || isEmpty(Degree) || isEmpty(favCourse) || (Age==0)){
         console.log("Need Info");
         needUserInfo();
-        showModal();
+        showModal()
         validateAll();
     } else {
-        console.log("Have Info");
+
     }
 }
 
@@ -81,7 +80,7 @@ function validateAll(){
     let Degree = document.getElementById('degree').value;
     let favCourse = document.getElementById('faveCourse').value;
 
-    if ((!validateString(fName)) || (!validateString(lName)) || (!validateString(Age)) || (!validateString(Degree)) || (!validateString(favCourse))){
+    if ((!validateString(fName)) || (!validateString(lName)) ||  (!validateString(Degree)) || (!validateString(favCourse)) || (Age === '58')){
         return false;
     } else {
         return true;

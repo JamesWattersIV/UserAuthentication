@@ -115,7 +115,7 @@ app.get('/auth/google',
 );
 
 app.get('/auth/google/profile',
-    passport.authenticate('google', { failureRedirect: '/login' }),
+    passport.authenticate('google', { failureRedirect: '/login/failed' }),
     function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/profile');
@@ -126,7 +126,7 @@ app.get('/auth/facebook',
 );
 
 app.get('/auth/facebook/profile',
-    passport.authenticate('facebook', { failureRedirect: '/login' }),
+    passport.authenticate('facebook', { failureRedirect: '/login/failed' }),
     function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/profile');
@@ -142,8 +142,7 @@ app.get('/profile', function(req,res){
             } else {
                 res.render('profile',{fName:foundUser.fName,lName:foundUser.lName,Age:foundUser.Age,Degree:foundUser.degree,favCourse:foundUser.favCourse});
             }
-        });
-
+        })
     } else {
         res.redirect('/login');
     }
@@ -190,6 +189,7 @@ app.post('/login',function(req,res){
 });
 
 app.get('/login/failed',function (req,res) {
+    console.log('Here');
     res.redirect('/login');
 });
 
