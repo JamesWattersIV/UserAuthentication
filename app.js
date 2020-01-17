@@ -74,8 +74,8 @@ passport.use(new GoogleStrategy({
         callbackURL: "https://fast-brook-96655.herokuapp.com/auth/google/profile",
         userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo"
     },
-    function(accessToken, refreshToken, profile, cb) {
-        console.log(profile.emails);
+    function(accessToken, refreshToken, profile, email,cb) {
+        console.log(email);
         User.findOrCreate({ googleId: profile.id, }, function (err, user) {
             return cb(err, user);
         });
