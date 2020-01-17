@@ -27,10 +27,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Connect to Mongoose DB
-mongoose.connect("mongodb://localhost:27017/userDB",{
-    useNewUrlParser:true,
-    useUnifiedTopology: true
-});
+mongoose.connect(process.env.DB_CONNECT,
+    {useNewUrlParser:true,
+    useUnifiedTopology: true},
+    () => console.log('Connected To MongoDB')
+    );
 
 mongoose.set('useCreateIndex',true);
 
