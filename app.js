@@ -76,7 +76,7 @@ passport.use(new GoogleStrategy({
     },
     function(accessToken, refreshToken, profile, email,cb) {
         console.log(email);
-        User.findOrCreate({ googleId: profile.id, }, function (err, user) {
+        User.findOrCreate({ googleId: profile.id, username: profile.id }, function (err, user) {
             return cb(err, user);
         });
     }
@@ -90,7 +90,7 @@ passport.use(new FacebookStrategy({
     },
     function(accessToken, refreshToken, profile, cb) {
         console.log(profile);
-        User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+        User.findOrCreate({ facebookId: profile.id, username: profile.id  }, function (err, user) {
             return cb(err, user);
         });
     }
