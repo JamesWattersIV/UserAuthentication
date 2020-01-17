@@ -71,7 +71,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
         clientID: process.env.G_CLIENT_ID,
         clientSecret: process.env.G_CLIENT_SECRET,
-        callbackURL: "http://localhost:3000/auth/google/profile",
+        callbackURL: "https://fast-brook-96655.herokuapp.com/auth/google/profile",
         userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo"
     },
     function(accessToken, refreshToken, profile, cb) {
@@ -85,7 +85,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
         clientID: process.env.FB_APP_ID,
         clientSecret: process.env.FB_SECRET,
-        callbackURL: "http://localhost:3000/auth/facebook/profile"
+        callbackURL: "https://fast-brook-96655.herokuapp.com/auth/facebook/profile"
     },
     function(accessToken, refreshToken, profile, cb) {
         User.findOrCreate({ facebookId: profile.id }, function (err, user) {
