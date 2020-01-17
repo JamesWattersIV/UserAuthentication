@@ -75,6 +75,7 @@ passport.use(new GoogleStrategy({
         userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo"
     },
     function(accessToken, refreshToken, profile, cb) {
+        console.log(profile);
         User.findOrCreate({ googleId: profile.id }, function (err, user) {
             return cb(err, user);
         });
@@ -88,6 +89,7 @@ passport.use(new FacebookStrategy({
         callbackURL: "https://fast-brook-96655.herokuapp.com/auth/facebook/profile"
     },
     function(accessToken, refreshToken, profile, cb) {
+        console.log(profile);
         User.findOrCreate({ facebookId: profile.id }, function (err, user) {
             return cb(err, user);
         });
